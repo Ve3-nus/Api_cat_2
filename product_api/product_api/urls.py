@@ -14,9 +14,17 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# product_api/urls.py
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.http import HttpResponse
+
+# To handle the 404 error case
+def home_view(request):
+    return HttpResponse("Welcome to the Product API!")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', include('products.urls')),  # Include products URLs for API
+    path('', home_view),
 ]
