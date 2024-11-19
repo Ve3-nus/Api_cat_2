@@ -21,3 +21,5 @@ Run migrations:
 
 `python manage.py runserver`
 Test the API using Thunderclient, check out my blog on thunderclient and other extentions
+
+## https://medium.com/@ve.kabera/enhance-your-coding-experience-with-essential-vs-code-extensions-c975fafb7ce5 
